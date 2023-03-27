@@ -1,10 +1,11 @@
 ---
-description: DT_HEGrenade
+description: DT_BaseCombatWeapon
 ---
 
-# CHEGrenade
+# CBaseCombatWeapon
 
 
+* `m_hMyWearables` (integer[0])
 * `m_flAnimTime` (integer)
 * `m_flSimulationTime` (integer)
 * `m_cellbits` (integer)
@@ -117,23 +118,3 @@ description: DT_HEGrenade
 * `m_iSecondaryReserveAmmoCount` (integer)
 * `m_hWeaponWorldModel` (integer)
 * `m_iNumEmptyAttacks` (integer)
-* `m_weaponMode` (integer)
-* `m_fAccuracyPenalty` (float)
-* `m_fLastShotTime` (float)
-* `m_flRecoilIndex` (float)
-* `m_flAnimTime` (integer)
-* `m_nSequence` (integer)
-* `m_hPrevOwner` (integer)
-* `m_bBurstMode` (integer)
-* `m_flPostponeFireReadyTime` (float)
-* `m_bReloadVisuallyComplete` (integer)
-* `m_bSilencerOn` (integer)
-* `m_flDoneSwitchingSilencer` (float)
-* `m_iOriginalTeamNumber` (integer)
-* `m_iIronSightMode` (integer)
-* `m_bRedraw` (integer)
-* `m_bIsHeldByPlayer` (integer)
-* `m_bPinPulled` (integer)
-* `m_fThrowTime` (float)
-* `m_bLoopingSoundPlaying` (integer)
-* `m_flThrowStrength` (float)

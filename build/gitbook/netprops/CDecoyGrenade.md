@@ -1,8 +1,8 @@
 ---
-description: DT_HEGrenade
+description: DT_DecoyGrenade
 ---
 
-# CHEGrenade
+# CDecoyGrenade
 
 
 * `m_flAnimTime` (integer)

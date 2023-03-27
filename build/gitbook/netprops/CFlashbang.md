@@ -1,8 +1,8 @@
 ---
-description: DT_HEGrenade
+description: DT_Flashbang
 ---
 
-# CHEGrenade
+# CFlashbang
 
 
 * `m_flAnimTime` (integer)

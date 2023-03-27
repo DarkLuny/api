@@ -1,8 +1,8 @@
 ---
-description: DT_HEGrenade
+description: DT_WeaponFists
 ---
 
-# CHEGrenade
+# CFists
 
 
 * `m_flAnimTime` (integer)
@@ -131,9 +131,4 @@ description: DT_HEGrenade
 * `m_flDoneSwitchingSilencer` (float)
 * `m_iOriginalTeamNumber` (integer)
 * `m_iIronSightMode` (integer)
-* `m_bRedraw` (integer)
-* `m_bIsHeldByPlayer` (integer)
-* `m_bPinPulled` (integer)
-* `m_fThrowTime` (float)
-* `m_bLoopingSoundPlaying` (integer)
-* `m_flThrowStrength` (float)
+* `m_bPlayingUninterruptableAct` (integer)

@@ -1,8 +1,8 @@
 ---
-description: DT_HEGrenade
+description: DT_WeaponC4
 ---
 
-# CHEGrenade
+# CC4
 
 
 * `m_flAnimTime` (integer)
@@ -131,9 +131,8 @@ description: DT_HEGrenade
 * `m_flDoneSwitchingSilencer` (float)
 * `m_iOriginalTeamNumber` (integer)
 * `m_iIronSightMode` (integer)
-* `m_bRedraw` (integer)
-* `m_bIsHeldByPlayer` (integer)
-* `m_bPinPulled` (integer)
-* `m_fThrowTime` (float)
-* `m_bLoopingSoundPlaying` (integer)
-* `m_flThrowStrength` (float)
+* `m_bStartedArming` (integer)
+* `m_bBombPlacedAnimation` (integer)
+* `m_fArmedTime` (float)
+* `m_bShowC4LED` (integer)
+* `m_bIsPlantingViaUse` (integer)
