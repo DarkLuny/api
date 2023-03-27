@@ -9,5 +9,3 @@
 {% page-ref page="../development/getting\_started.md" %}
 
 **Migrating gamesense configs**:
-
-
