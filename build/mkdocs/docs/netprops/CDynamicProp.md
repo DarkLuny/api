@@ -1,8 +1,8 @@
 ---
-summary: DT_Drone
+summary: DT_DynamicProp
 ---
 
-# CDrone
+# CDynamicProp
 
 
 * `m_flAnimTime` (integer)
@@ -82,19 +82,8 @@ summary: DT_Drone
 * `m_nHighlightColorB` (integer)
 * `m_qPreferredPlayerCarryAngles` (vector)
 * `m_bClientPhysics` (integer)
-* `m_flPoseParameter` (integer)
-* `m_flPlaybackRate` (integer)
-* `m_nMuzzleFlashParity` (integer)
-* `overlay_vars` (integer)
-* `m_flexWeight` (integer)
-* `m_blinktoggle` (integer)
-* `m_bAwake` (integer)
-* `m_hMoveToThisEntity` (integer)
-* `m_hDeliveryCargo` (integer)
-* `m_bPilotTakeoverAllowed` (integer)
-* `m_hPotentialCargo` (integer)
-* `m_hCurrentPilot` (integer)
-* `m_vecTagPositions` (vector)
-* `m_vecTagPositions` (array)
-* `m_vecTagIncrements` (integer)
-* `m_vecTagIncrements` (array)
+* `m_bUseHitboxesForRenderBox` (integer)
+* `m_flGlowMaxDist` (float)
+* `m_bShouldGlow` (integer)
+* `m_clrGlow` (integer)
+* `m_nGlowStyle` (integer)

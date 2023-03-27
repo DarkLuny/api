@@ -1,8 +1,8 @@
 ---
-summary: DT_Drone
+summary: DT_AI_BaseNPC
 ---
 
-# CDrone
+# CAI_BaseNPC
 
 
 * `m_flAnimTime` (integer)
@@ -80,21 +80,25 @@ summary: DT_Drone
 * `m_nHighlightColorR` (integer)
 * `m_nHighlightColorG` (integer)
 * `m_nHighlightColorB` (integer)
-* `m_qPreferredPlayerCarryAngles` (vector)
-* `m_bClientPhysics` (integer)
-* `m_flPoseParameter` (integer)
-* `m_flPlaybackRate` (integer)
-* `m_nMuzzleFlashParity` (integer)
-* `overlay_vars` (integer)
-* `m_flexWeight` (integer)
+* `lengthprop15` (integer)
+* `m_flexWeight` (float[0-95])
 * `m_blinktoggle` (integer)
-* `m_bAwake` (integer)
-* `m_hMoveToThisEntity` (integer)
-* `m_hDeliveryCargo` (integer)
-* `m_bPilotTakeoverAllowed` (integer)
-* `m_hPotentialCargo` (integer)
-* `m_hCurrentPilot` (integer)
-* `m_vecTagPositions` (vector)
-* `m_vecTagPositions` (array)
-* `m_vecTagIncrements` (integer)
-* `m_vecTagIncrements` (array)
+* `m_viewtarget` (vector)
+* `m_flNextAttack` (float)
+* `m_LastHitGroup` (integer)
+* `m_hActiveWeapon` (integer)
+* `m_flTimeOfLastInjury` (float)
+* `m_hMyWeapons` (integer[0-63])
+* `m_nRelativeDirectionOfLastInjury` (integer)
+* `m_hMyWearables` (integer[0])
+* `m_lifeState` (integer)
+* `m_bPerformAvoidance` (integer)
+* `m_bIsMoving` (integer)
+* `m_bFadeCorpse` (integer)
+* `m_iDeathPose` (integer)
+* `m_iDeathFrame` (integer)
+* `m_bSpeedModActive` (integer)
+* `m_iSpeedModRadius` (integer)
+* `m_iSpeedModSpeed` (integer)
+* `m_bImportanRagdoll` (integer)
+* `m_flTimePingEffect` (float)

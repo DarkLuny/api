@@ -1,8 +1,8 @@
 ---
-summary: DT_Drone
+summary: DT_BumpMineProjectile
 ---
 
-# CDrone
+# CBumpMineProjectile
 
 
 * `m_flAnimTime` (integer)
@@ -80,21 +80,13 @@ summary: DT_Drone
 * `m_nHighlightColorR` (integer)
 * `m_nHighlightColorG` (integer)
 * `m_nHighlightColorB` (integer)
-* `m_qPreferredPlayerCarryAngles` (vector)
-* `m_bClientPhysics` (integer)
-* `m_flPoseParameter` (integer)
-* `m_flPlaybackRate` (integer)
-* `m_nMuzzleFlashParity` (integer)
-* `overlay_vars` (integer)
-* `m_flexWeight` (integer)
-* `m_blinktoggle` (integer)
-* `m_bAwake` (integer)
-* `m_hMoveToThisEntity` (integer)
-* `m_hDeliveryCargo` (integer)
-* `m_bPilotTakeoverAllowed` (integer)
-* `m_hPotentialCargo` (integer)
-* `m_hCurrentPilot` (integer)
-* `m_vecTagPositions` (vector)
-* `m_vecTagPositions` (array)
-* `m_vecTagIncrements` (integer)
-* `m_vecTagIncrements` (array)
+* `m_flDamage` (float)
+* `m_DmgRadius` (float)
+* `m_bIsLive` (integer)
+* `m_hThrower` (integer)
+* `m_flAnimTime` (integer)
+* `m_vecVelocity` (vector)
+* `m_fFlags` (integer)
+* `m_nParentBoneIndex` (integer)
+* `m_vecParentBonePos` (vector)
+* `m_bArmed` (integer)

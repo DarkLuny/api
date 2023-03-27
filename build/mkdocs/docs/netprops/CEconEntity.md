@@ -1,8 +1,8 @@
 ---
-summary: DT_Drone
+summary: DT_EconEntity
 ---
 
-# CDrone
+# CEconEntity
 
 
 * `m_flAnimTime` (integer)
@@ -80,21 +80,19 @@ summary: DT_Drone
 * `m_nHighlightColorR` (integer)
 * `m_nHighlightColorG` (integer)
 * `m_nHighlightColorB` (integer)
-* `m_qPreferredPlayerCarryAngles` (vector)
-* `m_bClientPhysics` (integer)
-* `m_flPoseParameter` (integer)
-* `m_flPlaybackRate` (integer)
-* `m_nMuzzleFlashParity` (integer)
-* `overlay_vars` (integer)
-* `m_flexWeight` (integer)
+* `lengthprop15` (integer)
+* `m_flexWeight` (float[0-95])
 * `m_blinktoggle` (integer)
-* `m_bAwake` (integer)
-* `m_hMoveToThisEntity` (integer)
-* `m_hDeliveryCargo` (integer)
-* `m_bPilotTakeoverAllowed` (integer)
-* `m_hPotentialCargo` (integer)
-* `m_hCurrentPilot` (integer)
-* `m_vecTagPositions` (vector)
-* `m_vecTagPositions` (array)
-* `m_vecTagIncrements` (integer)
-* `m_vecTagIncrements` (array)
+* `m_viewtarget` (vector)
+* `m_hOuter` (integer)
+* `m_ProviderType` (integer)
+* `m_iReapplyProvisionParity` (integer)
+* `m_iItemDefinitionIndex` (integer)
+* `m_iEntityLevel` (integer)
+* `m_iItemIDHigh` (integer)
+* `m_iItemIDLow` (integer)
+* `m_iAccountID` (integer)
+* `m_iEntityQuality` (integer)
+* `m_bInitialized` (integer)
+* `m_szCustomName` (string)
+* `lengthprop32` (integer)
