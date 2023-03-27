@@ -1,0 +1,956 @@
+{
+	"globals_patch": [
+		{"op": "replace", "path": "config/load/args/1", "value": {"name": "tab", "description": "Name of the tab"}},
+		{"op": "replace", "path": "config/load/args/2", "value": {"name": "container", "description": "Name of the container"}},
+		{"op": "replace", "path": "ui/name/args/0", "value": {"name": "item", "description": "The special value returned by ui.new_checkbox, ui.new_slider, ui.new_combobox, ui.new_hotkey, or ui.reference."}}
+	],
+	"globals_merge": {
+		"bit": {
+			"arshift": {
+				"description": "Returns the bitwise arithmetic right-shift of its first argument by the number of bits given by the second argument.\nArithmetic right-shift treats the most-significant bit as a sign bit and replicates it.\nOnly the lower 5 bits of the shift count are used (reduces to the range [0..31]).",
+				"args": [
+					{
+						"name": "x",
+						"description": "number",
+						"type": "number"
+					},
+					{
+						"name": "n",
+						"description": "number of bits",
+						"type": "number"
+					}
+				]
+			},
+			"band": {
+				"description": "Returns the bitwise and of all of its arguments. Note that more than two arguments are allowed.",
+				"args": [
+					{
+						"name": "x1",
+						"description": "number",
+						"type": "number"
+					},
+					{
+						"name": "x2",
+						"description": "number",
+						"type": "number"
+					},
+					{
+						"name": "...",
+						"description": "number(s)",
+						"optional": true
+					}
+				]
+			},
+			"bnot": {
+				"description": "Returns the bitwise not of its argument.",
+				"args": [
+					{
+						"name": "x",
+						"description": "number",
+						"type": "number"
+					}
+				]
+			},
+			"bor": {
+				"description": "Returns the bitwise or of all of its arguments. Note that more than two arguments are allowed.",
+				"args": [
+					{
+						"name": "x1",
+						"description": "number",
+						"type": "number"
+					},
+					{
+						"name": "x2",
+						"description": "number",
+						"type": "number"
+					},
+					{
+						"name": "...",
+						"description": "number(s)",
+						"optional": true
+					}
+				]
+			},
+			"bswap": {
+				"description": "Swaps the bytes of its argument and returns it. This can be used to convert little-endian 32 bit numbers to big-endian 32 bit numbers or vice versa.",
+				"args": [
+					{
+						"name": "x",
+						"description": "number",
+						"type": "number"
+					}
+				]
+			},
+			"bxor": {
+				"description": "Returns the bitwise xor of all of its arguments. Note that more than two arguments are allowed.",
+				"args": [
+					{
+						"name": "x1",
+						"description": "number",
+						"type": "number"
+					},
+					{
+						"name": "[x2...]",
+						"description": "number(s)",
+						"type": "number"
+					}
+				]
+			},
+			"lshift": {
+				"description": "Returns the bitwise logical left-shift of its first argument by the number of bits given by the second argument.\nLogical shifts treat the first argument as an unsigned number and shift in 0-bits.\nOnly the lower 5 bits of the shift count are used (reduces to the range [0..31]).",
+				"args": [
+					{
+						"name": "x",
+						"description": "number",
+						"type": "number"
+					},
+					{
+						"name": "n",
+						"description": "number of bits",
+						"type": "number"
+					}
+				]
+			},
+			"rol": {
+				"description": "Returns the bitwise left rotation of its first argument by the number of bits given by the second argument. Bits shifted out on one side are shifted back in on the other side.\nOnly the lower 5 bits of the rotate count are used (reduces to the range [0..31]).",
+				"args": [
+					{
+						"name": "x",
+						"description": "number",
+						"type": "number"
+					},
+					{
+						"name": "n",
+						"description": "number of bits",
+						"type": "number"
+					}
+				]
+			},
+			"ror": {
+				"description": "Returns the bitwise right rotation of its first argument by the number of bits given by the second argument. Bits shifted out on one side are shifted back in on the other side.\nOnly the lower 5 bits of the rotate count are used (reduces to the range [0..31]).",
+				"args": [
+					{
+						"name": "x",
+						"description": "number",
+						"type": "number"
+					},
+					{
+						"name": "n",
+						"description": "number of bits",
+						"type": "number"
+					}
+				]
+			},
+			"rshift": {
+				"description": "Returns the bitwise logical right-shift of its first argument by the number of bits given by the second argument.\nLogical shifts treat the first argument as an unsigned number and shift in 0-bits.\nOnly the lower 5 bits of the shift count are used (reduces to the range [0..31]).",
+				"args": [
+					{
+						"name": "x",
+						"description": "number",
+						"type": "number"
+					},
+					{
+						"name": "n",
+						"description": "number of bits",
+						"type": "number"
+					}
+				]
+			},
+			"tobit": {
+				"description": "Normalizes a number to the numeric range for bit operations and returns it. This function is usually not needed since all bit operations already normalize all of their input arguments.",
+				"args": [
+					{
+						"name": "x",
+						"description": "number to normalize",
+						"type": "number"
+					}
+				]
+			},
+			"tohex": {
+				"description": "Converts its first argument to a hex string. The number of hex digits is given by the absolute value of the optional second argument. Positive numbers between 1 and 8 generate lowercase hex digits. Negative numbers generate uppercase hex digits. Only the least-significant 4*|n| bits are used. The default is to generate 8 lowercase hex digits.",
+				"args": [
+					{
+						"name": "x",
+						"description": "number to convert",
+						"type": "number"
+					},
+					{
+						"name": "n",
+						"description": "number of hex digits to return",
+						"type": "number"
+					}
+				]
+			}
+		},
+		"cvar": {
+			"set_string": {
+				"name": "cvar_object:set_string",
+				"description": "Sets the int, float and string value to the passed float. Invokes the change callback"
+			},
+			"get_string": {
+				"name": "cvar_object:get_string"
+			},
+			"set_float": {
+				"name": "cvar_object:set_float",
+				"description": "Sets the int, float and string value to the passed float. Invokes the change callback"
+			},
+			"set_raw_float": {
+				"name": "cvar_object:set_raw_float"
+			},
+			"get_float": {
+				"name": "cvar_object:get_float"
+			},
+			"set_int": {
+				"name": "cvar_object:set_int",
+				"description": "Sets the int, float and string value to the passed float. Invokes the change callback"
+			},
+			"set_raw_int": {
+				"name": "cvar_object:set_raw_int"
+			},
+			"get_int": {
+				"name": "cvar_object:get_int"
+			},
+			"invoke_callback": {
+				"name": "cvar_object:invoke_callback",
+				"args": [
+					{
+						"name": "...",
+						"description": "Arguments passed to the callback"
+					}
+				],
+				"description": "Executes a ConCommand or cvar callback, passing its arguments to it"
+			}
+		},
+		"client": {
+			"camera_angles": {
+				"description": "Get or set camera angles",
+				"args": [
+					{
+						"name": "pitch",
+						"description": "Pitch"
+					},
+					{
+						"name": "yaw",
+						"description": "Yaw"
+					}
+				],
+				"all_optional": true
+			},
+			"camera_position": {
+				"description": "Returns x, y, z world coordinates of the game's camera position, or nil on failure.",
+				"args": []
+			},
+			"create_interface": {
+				"description": "Returns a pointer to the interface, or nil on failure.",
+				"return_type": "userdata (ffi pointer)",
+				"args": [
+					{
+						"name": "module_name",
+						"description": "Filename of the module that contains the interface"
+					},
+					{
+						"name": "interface_name",
+						"description": "Name of the interface"
+					}
+				]
+			},
+			"find_signature": {
+				"description": "Finds the specified pattern and returns a pointer to it, or nil if not found.",
+				"return_type": "userdata (ffi pointer)",
+				"args": [
+					{
+						"name": "module_name",
+						"description": "Filename of the module that contains the interface"
+					},
+					{
+						"name": "pattern",
+						"description": "String of the signature. Escape with \\x, replace wildcards with \\xCC"
+					}
+				]
+			},
+			"unix_time": {
+				"description": "Returns current windows time as [unix time / epoch time](https://en.wikipedia.org/wiki/Unix_time) (seconds since 1 January 1970 00:00:00)"
+			},
+			"key_state": {
+				"description": "Returns true if the key is pressed, or nil on failure",
+				"args": [
+					{
+						"name": "key",
+						"description": "Virtual key code of the key as integer. [List of virtual key codes](https://docs.microsoft.com/en-us/windows/desktop/inputdev/virtual-key-codes)"
+					}
+				]
+			},
+			"update_player_list": {
+				"description": "Updates the player list tab without having to open it.",
+				"args": []
+			},
+			"system_time": {
+				"description": "Returns windows time as (hours, minutes, seconds, milliseconds)",
+				"return_type": "number, number, number, number"
+			},
+			"delay_call": {
+				"description": "Executes the callback after delay seconds, passing the arguments to it."
+			},
+			"color_log": {
+				"description": "Logs a colored message to console. End the string with \\0 to prevent it from adding a newline."
+			},
+			"log": {
+				"description": "Logs a message to console in the [gamesense] format."
+			},
+			"exec": {
+				"description": "Executes a console command. Multiple commands can be combined with ';'. Be careful when passing user input (including usernames) to it."
+			}
+		},
+		"renderer": {
+			"texture": {
+				"description": "Draws a texture from the texture id created from load_rgba, load_png, load_jpg or load_svg"
+			},
+			"load_png": {
+				"description": "Loads a texture from raw png contents (with file header). Returns a texture ID that can be used with renderer.texture, or nil on failure",
+				"args": [
+					{
+						"name": "contents",
+						"description": "Raw PNG file contents"
+					},
+					{
+						"name": "width",
+						"description": "Image width"
+					},
+					{
+						"name": "height",
+						"description": "Image height"
+					}
+				]
+			},
+			"load_jpg": {
+				"description": "Loads a texture from raw JPG contents (with file header). Returns a texture ID that can be used with renderer.texture, or nil on failure",
+				"args": [
+					{
+						"name": "contents",
+						"description": "Raw JPG file contents"
+					},
+					{
+						"name": "width",
+						"description": "Image width"
+					},
+					{
+						"name": "height",
+						"description": "Image height"
+					}
+				]
+			},
+			"load_rgba": {
+				"description": "Loads a texture from a RGBA buffer. Returns a texture ID that can be used with renderer.texture, or nil on failure",
+				"args": [
+					{
+						"name": "contents",
+						"description": "RGBA buffer (hex encoded - red = \"\\xFF\\x00\\x00\\xFF\")"
+					},
+					{
+						"name": "width",
+						"description": "Width"
+					},
+					{
+						"name": "height",
+						"description": "Height"
+					}
+				]
+			}
+		},
+		"materialsystem": {
+			"override_material": {
+				"description": "Overrides all of a material properties with another material.",
+				"args": [
+					{
+						"name": "material",
+						"description": "The material to override",
+						"type": "table (material object)"
+					},
+					{
+						"name": "material_new",
+						"description": "The material to override it with",
+						"type": "table (material object)"
+					}
+				]
+			},
+			"alpha_modulate": {
+				"name": "material_object:alpha_modulate",
+				"description": "Overrides the alpha of the material object it's called on. Doesn't work with some materials",
+				"args": [
+					{
+						"name": "a",
+						"description": "New alpha value of the material (0-255)"
+					}
+				]
+			},
+			"color_modulate": {
+				"name": "material_object:color_modulate",
+				"description": "Overrides the color of the material object it's called on. Doesn't work with some materials",
+				"args": [
+					{
+						"name": "r",
+						"description": "New red value of the material (0-255)"
+					},
+					{
+						"name": "g",
+						"description": "New green value of the material (0-255)"
+					},
+					{
+						"name": "b",
+						"description": "New blue value of the material (0-255)"
+					}
+				]
+			},
+			"reload": {
+				"name": "material_object:reload",
+				"description": "Restores the original material properties of the material it's called on."
+			},
+			"get_name": {
+				"name": "material_object:get_name",
+				"description": "Returns name of the material"
+			},
+			"get_material_var_flag": {
+				"name": "material_object:get_material_var_flag",
+				"description": "Returns the boolean value of the material var flag",
+				"args": [
+					{
+						"name": "material_var_flag",
+						"description": "Material var flag as number"
+					}
+				]
+			},
+			"set_material_var_flag": {
+				"name": "material_object:set_material_var_flag",
+				"description": "Sets the value of the material var flag of the material",
+				"args": [
+					{
+						"name": "material_var_flag",
+						"description": "Material var flag as number"
+					},
+					{
+						"name": "value",
+						"description": "New boolean value of the material var flag"
+					}
+				]
+			},
+			"get_shader_param": {
+				"name": "material_object:get_shader_param",
+				"description": "Returns the value of the shader param or nil",
+				"args": [
+					{
+						"name": "shader_param",
+						"description": "Shader param name"
+					}
+				],
+				"return_type": "any"
+			},
+			"set_shader_param": {
+				"name": "material_object:set_shader_param",
+				"description": "Sets the value of the shader param of the material",
+				"args": [
+					{
+						"name": "shader_param",
+						"description": "Shader param name"
+					},
+					{
+						"name": "value",
+						"description": "New value of the shader param"
+					}
+				]
+			}
+		},
+		"ui": {
+			"update": {
+				"description": "Creates a string UI element, can be used to store arbitrary strings in configs. No menu item is created but it has the same semantics as other ui.new_* functions. Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.",
+				"args": [
+					{
+						"name": "item",
+						"description": "The special value returned by ui.new_checkbox, ui.new_slider, ui.new_combobox, ui.new_hotkey, or ui.reference.",
+						"type": "number (menu reference)"
+					},
+					{
+						"name": "value",
+						"description": "The value to which the menu item will be set",
+						"type": "any"
+					},
+					{
+						"name": "...",
+						"description": "For multiselect comboboxes, you may want to set more than one option."
+					}
+				]
+			},
+			"new_string": {
+				"description": "Creates a string UI element, can be used to store arbitrary strings in configs. No menu item is created but it has the same semantics as other ui.new_* functions. Returns a special value that can be passed to ui.get and ui.set, or throws an error on failure.",
+				"args": [
+					{
+						"name": "name",
+						"description": "The name of the string element, make sure this is unique."
+					},
+					{
+						"name": "default_value",
+						"description": "Optional string that specifies the default value.",
+						"type": "string"
+					}
+				]
+			},
+			"new_label": {
+				"description": "Creates a new label, this can be used to make otherwise attached menu items standalone or have interactive menus. Returns a special value that can be passed to ui.set, or throws an error on failure.",
+				"args": [
+					{
+						"name": "tab",
+						"description": "The name of the tab: AA, RAGE, LEGIT, MISC, PLAYERS, SKINS, or VISUALS."
+					},
+					{
+						"name": "container",
+						"description": "The name of the existing container to which this control will be added."
+					},
+					{
+						"name": "name",
+						"description": "The name of the label. This can later be changed using ui.set."
+					}
+				]
+			},
+			"set_callback": {
+				"description": "Sets the change callback of a custom menu item. It will be executed on change and passed the reference"
+			},
+			"set_visible": {
+				"description": "Sets the visibility of the menu item"
+			},
+			"menu_position": {
+				"description": "Returns the x, y of the menu, even when closed."
+			},
+			"menu_size": {
+				"description": "Returns the width, height of the menu, even when closed."
+			}
+		},
+		"entity": {
+			"set_prop": {
+				"description": "Sets the value of the property. For vectors or angles, pass three values."
+			},
+			"is_dormant": {
+				"description": "Returns true if the entity is dormant."
+			},
+			"get_origin": {
+				"description": "Returns the x, y, z coordinates of the entity. Only works for non-dormant entities, except for players, where it will return the dormant esp origin",
+				"args": [
+					{
+						"name": "ent",
+						"description": "Entity index"
+					}
+				]
+			}
+		},
+		"database": {
+			"read": {
+				"description": "Gets a value from the database",
+				"return_type": "any",
+				"args": [
+					{
+						"name": "key_name",
+						"description": "String used as a name of the key. Make sure to write to the same key_name."
+					}
+				]
+			},
+			"write": {
+				"description": "Writes a value to the database. Avoid calling this often. For example, call read at script load, then call write during the 'shutdown' event",
+				"args": [
+					{
+						"name": "key_name",
+						"description": "String used as a name of the key."
+					},
+					{
+						"name": "value",
+						"description": "Value the key should be set to. This can be anything that can be sanitized (no functions, userdata)"
+					}
+				]
+			}
+		},
+		"json": {
+			"parse": {
+				"description": "json.parse will deserialise any UTF-8 JSON string into a Lua value or table. null will be converted to a NULL lightuserdata value. This can be compared with cjson.null for convenience.",
+				"args": [
+					{
+						"name": "json_text",
+						"description": "UTF-8 JSON text",
+						"type": "string"
+					}
+				],
+				"return_type": "any"
+			},
+			"stringify": {
+				"description": "Will serialise a Lua value into a string containing the JSON representation.",
+				"args": [
+					{
+						"name": "value",
+						"description": "A lua boolean, number, string, table or nil"
+					}
+				],
+				"return_type": "string"
+			},
+			"decode_invalid_numbers": {
+				"description": "Lua CJSON may generate an error when trying to decode numbers not supported by the JSON specification. Invalid numbers are defined as: infinity, not-a-number (NaN) or hexadecimal. The current value wil always be returned.",
+				"args": [
+					{
+						"name": "setting",
+						"description": "Pass true to accept and decode invalid numbers or false to throw an error",
+						"type": "boolean",
+						"optional": true
+					}
+				],
+				"return_type": "boolean"
+			},
+			"decode_max_depth": {
+				"description": "Lua CJSON will generate an error when parsing deeply nested JSON once the maximum array/object depth has been exceeded. This check prevents unnecessarily complicated JSON from slowing down the application, or crashing the application due to lack of process stack space.",
+				"args": [
+					{
+						"name": "setting",
+						"description": "depth must be a positive integer. Default: 1000.",
+						"type": "number",
+						"optional": true
+					}
+				],
+				"return_type": "number"
+			},
+			"encode_invalid_numbers": {
+				"description": "Lua CJSON may generate an error when encoding floating point numbers not supported by the JSON specification (invalid numbers): infinity, not-a-number (NaN)",
+				"args": [
+					{
+						"name": "setting",
+						"description": "Pass true to allow invalid numbers to be encoded. This will generate non-standard JSON, but this output is supported by some libraries.",
+						"type": "boolean",
+						"optional": true
+					}
+				],
+				"return_type": "boolean"
+			},
+			"encode_keep_buffer": {
+				"description": "Lua CJSON can reuse the JSON encoding buffer to improve performance.",
+				"args": [
+					{
+						"name": "setting",
+						"description": "The buffer will grow to the largest size required and is not freed until the Lua CJSON module is garbage collected when true is passed.",
+						"type": "boolean",
+						"optional": true
+					}
+				],
+				"return_type": "boolean"
+			},
+			"encode_max_depth": {
+				"description": "Once the maximum table depth has been exceeded Lua CJSON will generate an error. This prevents a deeply nested or recursive data structure from crashing the application.",
+				"args": [
+					{
+						"name": "depth",
+						"description": "depth must be a positive integer. Default: 1000.",
+						"type": "number",
+						"optional": true
+					}
+				],
+				"return_type": "number"
+			},
+			"encode_number_precision": {
+				"description": "The amount of significant digits returned by Lua CJSON when encoding numbers can be changed to balance accuracy versus performance. For data structures containing many numbers, setting cjson.encode_number_precision to a smaller integer, for example 3, can improve encoding performance by up to 50%.",
+				"args": [
+					{
+						"name": "precision",
+						"description": "precision must be an integer between 1 and 14. Default: 14.",
+						"type": "number",
+						"optional": true
+					}
+				],
+				"return_type": "number"
+			},
+			"encode_sparse_array": {
+				"description": "Lua CJSON classifies a Lua table into one of three kinds when encoding a JSON array. This is determined by the number of values missing from the Lua array as follows:",
+				"args": [
+					{
+						"name": "convert",
+						"description": "convert must be a boolean. Default: false",
+						"type": "boolean",
+						"optional": true
+					},
+					{
+						"name": "ratio",
+						"description": "ratio must be a positive integer. Default: 2.",
+						"type": "number",
+						"optional": true
+					},
+					{
+						"name": "safe",
+						"description": "safe must be a positive integer. Default: 10.",
+						"type": "number",
+						"optional": true
+					}
+				],
+				"return_type": "boolean, number, number"
+			}
+		},
+		"vector": {
+			"vector": {
+				"name": "vector",
+				"description": "Creates a new vector object. Please note that you need to load the built-in vector library with require \"vector\"",
+				"args": [
+					{
+						"name": "x",
+						"description": "X coordinate of 3D position",
+						"type": "number"
+					},
+					{
+						"name": "y",
+						"description": "Y coordinate of 3D position",
+						"type": "number"
+					},
+					{
+						"name": "z",
+						"description": "Z coordinate of 3D position",
+						"type": "number"
+					}
+				],
+				"return_type": "vector"
+			},
+			"unpack": {
+				"name": "vector_object:unpack",
+				"description": "Returns the X, Y and Z coordinate of the vector object. They can also be accessed by vec.x, vec.y, etc",
+				"return_type": "number, number, number"
+			},
+			"init": {
+				"name": "vector_object:init",
+				"description": "Overwrites the X, Y and Z coordinates of the vector object, returning itself",
+				"args": [
+					{
+						"name": "x",
+						"description": "X coordinate of 3D position",
+						"type": "number"
+					},
+					{
+						"name": "y",
+						"description": "Y coordinate of 3D position",
+						"type": "number"
+					},
+					{
+						"name": "z",
+						"description": "Z coordinate of 3D position",
+						"type": "number"
+					}
+				],
+				"return_type": "vector"
+			},
+			"init_from_angles": {
+				"name": "vector_object:init_from_angles",
+				"description": "Converts the pitch, yaw and roll passed to a forward vector and overwrites the X, Y and Z coordinates with that. Returns itself",
+				"args": [
+					{
+						"name": "pitch",
+						"description": "Pitch component of angle",
+						"type": "number"
+					},
+					{
+						"name": "yaw",
+						"description": "Yaw component of angle",
+						"type": "number"
+					},
+					{
+						"name": "roll",
+						"description": "Roll component of angle",
+						"optional": true,
+						"type": "number"
+					}
+				],
+				"return_type": "vector"
+			},
+			"scale": {
+				"name": "vector_object:scale",
+				"description": "Scales the vector by the specified value.",
+				"args": [
+					{
+						"name": "scalar",
+						"description": "Scalar value",
+						"type": "number"
+					}
+				]
+			},
+			"scaled": {
+				"name": "vector_object:scaled",
+				"description": "Returns a new vector, scaled by the specified value.",
+				"args": [
+					{
+						"name": "scalar",
+						"description": "Scalar value",
+						"type": "number"
+					}
+				],
+				"return_type": "vector"
+			},
+			"normalize": {
+				"name": "vector_object:normalize",
+				"description": "Normalizes the vector, dividing it by it's own length (resulting in a unit vector with length = 1)"
+			},
+			"normalized": {
+				"name": "vector_object:normalized",
+				"description": "Returns a new unit vector, divided it by it's own length",
+				"return_type": "vector"
+			},
+			"length2d": {
+				"name": "vector_object:length2d",
+				"description": "Returns the 2d length (X and Y components)",
+				"return_type": "number"
+			},
+			"length2dsqr": {
+				"name": "vector_object:length2dsqr",
+				"description": "Returns the squared 2d length (X and Y components, faster than :length2d)",
+				"return_type": "number"
+			},
+			"length": {
+				"name": "vector_object:length",
+				"description": "Returns the length (magnitude)",
+				"return_type": "number"
+			},
+			"lengthsqr": {
+				"name": "vector_object:lengthsqr",
+				"description": "Returns the squared length (faster than :length)",
+				"return_type": "number"
+			},
+			"lerp": {
+				"name": "vector_object:lerp",
+				"description": "Interpolates by the specified percentage between the 2 vectors.",
+				"args": [
+					{
+						"name": "to",
+						"description": "Vector to lerp to",
+						"type": "vector"
+					},
+					{
+						"name": "percentage",
+						"description": "Interpolation percentage (0-1)",
+						"type": "number"
+					}
+				],
+				"return_type": "vector"
+			},
+			"dot": {
+				"name": "vector_object:dot",
+				"description": "Returns the dot product of the vector",
+				"return_type": "number"
+			},
+			"dist": {
+				"name": "vector_object:dist",
+				"description": "Returns the 3d distance to another vector",
+				"args": [
+					{
+						"name": "other",
+						"description": "Vector to calculate the distance to",
+						"type": "vector"
+					}
+				],
+				"return_type": "number"
+			},
+			"dist2d": {
+				"name": "vector_object:dist",
+				"description": "Returns the 2d distance to another vector",
+				"args": [
+					{
+						"name": "other",
+						"description": "Vector to calculate the distance to",
+						"type": "vector"
+					}
+				],
+				"return_type": "number"
+			},
+			"dist2d": {
+				"name": "vector_object:dist",
+				"description": "Returns the 2d distance to another vector",
+				"args": [
+					{
+						"name": "other",
+						"description": "Vector to calculate the distance to",
+						"type": "vector"
+					}
+				],
+				"return_type": "number"
+			},
+			"cross": {
+				"name": "vector_object:dist2d",
+				"description": "Returns the cross product / vector product of itself and another vector",
+				"args": [
+					{
+						"name": "other",
+						"description": "Other vector",
+						"type": "vector"
+					}
+				],
+				"return_type": "number"
+			},
+			"angles": {
+				"name": "vector_object:angles",
+				"description": "Converts the vector to an angle and returns the pitch, yaw and roll",
+				"return_type": "number, number, number"
+			},
+			"vectors": {
+				"name": "vector_object:vectors",
+				"description": "Returns the right and up vector of a forward vector",
+				"return_type": "vector, vector"
+			},
+			"to": {
+				"name": "vector_object:to",
+				"description": "Returns the forward vector from itself to another vector",
+				"args": [
+					{
+						"name": "other",
+						"description": "Other vector",
+						"type": "vector"
+					}
+				],
+				"return_type": "vector"
+			}
+		}
+	},
+	"globals_descriptions": {
+		"bit": "LuaJIT library for bitwise operations",
+		"client": "General game- and cheat-related functions",
+		"ui": "Functions for interfacing with the gamesense menu",
+		"renderer": "Functions for drawing visuals. Usually won't work outside the `paint` event.",
+		"entity": "Functions for getting and setting entities and entity data.",
+		"cvar": "A table letting you get and set the value of cvars and invoke their callbacks. Uses Object-oriented format",
+		"globals": "Functions for getting game globals such as the server time and map name.",
+		"materialsystem": "Functions controlling the CS:GO Material System, letting you modulate, swap, remove materials and set their shader params / material vars",
+		"database": "Persistent storage engine that lets you store values between reloads / reinjects",
+		"config": "Configuration related lua functions",
+		"json": "JSON encoding / parsing functions, based on lua-cjson",
+		"vector": "Built-in vector library, loaded by requiring vector",
+		"panorama": "API to interact with CS:GO's panorama UI",
+		"plist": "Functions for interacting with the player list"
+	},
+	"globals_examples": {
+		"cvar": [
+			{
+				"title": "cvar-1.lua",
+				"contents": "```lua\nlocal bxor = bit.bxor\nlocal cl_fullupdate = cvar.cl_fullupdate\nlocal developer = cvar.developer\n\n-- invoking callback of ConCommand\ncl_fullupdate:invoke_callback()\n\n-- toggle ConVar\nlocal oldval = developer.get_int()\ndeveloper:set_raw_int(bxor(oldval, 1))\n```"
+			},
+			{
+				"title": "cvar-2.lua",
+				"contents": "```lua\nlocal snd_setmixer = cvar.snd_setmixer\n\n-- Mutes ambient volume by setting the mixer \"vol\" option to 0\nsnd_setmixer:invoke_callback(\"Ambient\", \"vol\", \"0\")\n```"
+			}
+		],
+		"materialsystem": [
+			{
+				"title": "materialsystem-1.lua",
+				"contents": "```lua\n-- materialsystem example here\n```"
+			}
+		],
+		"database": [
+			{
+				"title": "database-1.lua",
+				"contents": "```lua\nlocal data = database.read(\"example-1\") or {}\ndata.load_count = (data.load_count or 0) + 1\n\nclient.log(\"this is the \", data.load_count, \". time you've loaded this script!\")\n\nclient.set_event_callback(\"player_death\", function(e)\n\tif client.userid_to_entindex(e.attacker) == entity.get_local_player() then\n\t\tdata.kill_count = (data.kill_count or 0) + 1\n\t\tclient.log(\"this is your \", data.kill_count, \". kill!\")\n\tend\nend)\n\nclient.set_event_callback(\"shutdown\", function()\n\tdatabase.write(\"example-1\", data)\nend)\n```"
+			}
+		]
+	},
+	"globals_replacements": {
+		"function_descriptions": [],
+		"function_arg_descriptions": {
+			"AA, RAGE, LEGIT, MISC, PLAYERS, SKINS, or VISUALS": "RAGE, AA, LEGIT, VISUALS, MISC, SKINS, PLAYERS, CONFIG or LUA",
+			"(1-255)": "(0-255)"
+		}
+	},
+	"globals_deprecated_regex": "^(draw_.{1,}|world_to_screen|get_cvar|set_cvar)$",
+	"globals_optional_regex": "^Optional[. ]",
+	"globals_type_description_regex": "^(.+) \\((.+)\\)$"
+}
