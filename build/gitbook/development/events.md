@@ -10,26 +10,26 @@ description: List of events that you can listen to using client.set_event_callba
 Fired every time the game renders a frame while being connected to a server. Can be used to draw to the screen using the [renderer.*](/docs/developers/globals/renderer) functions
 
 
-{% page-ref page="/developers/globals/renderer" %}
+
 
 **Examples:**
 
-{% code-tabs %}
-{% code-tabs-item %}
+
+
 ```lua
 client.set_event_callback("paint", function()
 	renderer.text(15, 15, 255, 255, 255, 255, nil, 0, "hello world")
 end)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
+
 
 #### paint_ui
 
 Fired every time the game renders a frame, even if you're in the menu. Can be used to draw to the screen using the [renderer.*](/docs/developers/globals/renderer) functions
 
 
-{% page-ref page="/developers/globals/renderer" %}
+
 
 
 #### run_command
@@ -114,23 +114,23 @@ Fired every time the user types something in the game console and presses enter.
 
 **Examples:**
 
-{% code-tabs %}
-{% code-tabs-item %}
+
+
 ```lua
 client.set_event_callback("console_input", function(text)
 	client.log("entered: '", text, "'")
 end)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
+
 
 #### output
 
 This event lets you override the text drawn in the top left. There can only be one callback for this event. This event callback is invoked from print, client.log, client.color_log, "Missed due to spread" message, etc.
 
-{% hint style="warning" %}
+
 Make sure to unset your callback when you don't need it. Otherwise you will break the built-in output and other scripts using this event.
-{% endhint %}
+
 
 Key | Description
 --- | -----------
@@ -146,9 +146,9 @@ Key | Description
 
 This event lets you lets you override how indicators are drawn. There can only be one callback for this event. This event callback is invoked from renderer.indicator and indicators like "DT".
 
-{% hint style="warning" %}
+
 Make sure to unset your callback when you don't need it. Otherwise you will break the built-in indicators and other scripts using this event.
-{% endhint %}
+
 
 Key | Description
 --- | -----------
@@ -199,9 +199,9 @@ Fired after an entity update packet is received from the server. (`FrameStageNot
 
 Fired when the game prediction is ran
 
-{% hint style="info" %}
+
 This event is called a lot of times per second, avoid doing any heavy processing in it.
-{% endhint %}
+
 
 Key | Description
 --- | -----------
@@ -246,8 +246,8 @@ Key | Description
 
 **Examples:**
 
-{% code-tabs %}
-{% code-tabs-item %}
+
+
 ```lua
 local function time_to_ticks(t)
 	return floor(0.5 + (t / globals.tickinterval()))
@@ -268,8 +268,8 @@ local function aim_fire(e)
 end
 client.set_event_callback('aim_fire', aim_fire)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
+
 
 #### aim_hit
 
@@ -286,8 +286,8 @@ Key | Description
 
 **Examples:**
 
-{% code-tabs %}
-{% code-tabs-item %}
+
+
 ```lua
 local hitgroup_names = {'generic', 'head', 'chest', 'stomach', 'left arm', 'right arm', 'left leg', 'right leg', 'neck', '?', 'gear'}
 
@@ -297,8 +297,8 @@ local function aim_hit(e)
 end
 client.set_event_callback('aim_hit', aim_hit)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
+
 
 #### aim_miss
 
@@ -315,8 +315,8 @@ Key | Description
 
 **Examples:**
 
-{% code-tabs %}
-{% code-tabs-item %}
+
+
 ```lua
 local hitgroup_names = {'generic', 'head', 'chest', 'stomach', 'left arm', 'right arm', 'left leg', 'right leg', 'neck', '?', 'gear'}
 
@@ -326,8 +326,8 @@ local function aim_miss(e)
 end
 client.set_event_callback('aim_miss', aim_miss)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
+
 
 #### pre_config_load
 
