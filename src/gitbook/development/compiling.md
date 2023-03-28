@@ -18,5 +18,5 @@ After you successfully extracted it, type the following command:
 luajit.exe -b script.lua compiled.ljbc
 ```
 
-{% endcode-tabs 
+
 
