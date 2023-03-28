@@ -12,15 +12,15 @@ Fired every time the game renders a frame while being connected to a server. Can
 
 **Examples:**
 
-{% code-tabs %}
-{% code-tabs-item %}
+
+
 ```lua
 client.set_event_callback("paint", function()
 	renderer.text(15, 15, 255, 255, 255, 255, nil, 0, "hello world")
 end)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
+
 
 #### paint_ui
 
@@ -110,15 +110,15 @@ Fired every time the user types something in the game console and presses enter.
 
 **Examples:**
 
-{% code-tabs %}
-{% code-tabs-item %}
+
+
 ```lua
 client.set_event_callback("console_input", function(text)
 	client.log("entered: '", text, "'")
 end)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
+
 
 #### output
 
@@ -230,8 +230,8 @@ Key | Description
 
 **Examples:**
 
-{% code-tabs %}
-{% code-tabs-item %}
+
+
 ```lua
 local function time_to_ticks(t)
 	return floor(0.5 + (t / globals.tickinterval()))
@@ -252,8 +252,8 @@ local function aim_fire(e)
 end
 client.set_event_callback('aim_fire', aim_fire)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
+
 
 #### aim_hit
 
@@ -270,8 +270,8 @@ Key | Description
 
 **Examples:**
 
-{% code-tabs %}
-{% code-tabs-item %}
+
+
 ```lua
 local hitgroup_names = {'generic', 'head', 'chest', 'stomach', 'left arm', 'right arm', 'left leg', 'right leg', 'neck', '?', 'gear'}
 
@@ -281,8 +281,8 @@ local function aim_hit(e)
 end
 client.set_event_callback('aim_hit', aim_hit)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
+
 
 #### aim_miss
 
@@ -299,8 +299,8 @@ Key | Description
 
 **Examples:**
 
-{% code-tabs %}
-{% code-tabs-item %}
+
+
 ```lua
 local hitgroup_names = {'generic', 'head', 'chest', 'stomach', 'left arm', 'right arm', 'left leg', 'right leg', 'neck', '?', 'gear'}
 
@@ -310,8 +310,8 @@ local function aim_miss(e)
 end
 client.set_event_callback('aim_miss', aim_miss)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
+
 
 #### pre_config_load
 
