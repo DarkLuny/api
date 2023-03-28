@@ -163,10 +163,6 @@ Sets the value of the shader param of the material
 
 ### Examples:
 
-{% code-tabs %}
-{% code-tabs-item title="materialsystem-1.lua" %}
 ```lua
 -- materialsystem example here
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
