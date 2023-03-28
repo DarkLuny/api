@@ -94,8 +94,8 @@ Sets the int, float and string value to the passed float. Invokes the change cal
 
 ### Examples:
 
-{% code-tabs %}
-{% code-tabs-item title="cvar-1.lua" %}
+
+
 ```lua
 local bxor = bit.bxor
 local cl_fullupdate = cvar.cl_fullupdate
