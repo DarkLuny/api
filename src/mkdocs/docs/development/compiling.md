@@ -12,8 +12,7 @@
 
 After you successfully extracted it, type the following command:
 
-{% code-tabs %}
-{% code-tabs-item title="compile.cmd" %}
+
 ```text
 luajit.exe -b script.lua compiled.ljbc
 ```
