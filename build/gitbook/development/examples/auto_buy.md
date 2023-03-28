@@ -2,7 +2,7 @@
 
 This script adds an "Auto buy AWP" checkbox to the misc tab, useful for spread HvH when AWP purchases are limited.
 
-{% code-tabs 
+
 
 ```lua
 local ui_get, console_cmd = ui.get, client.exec
