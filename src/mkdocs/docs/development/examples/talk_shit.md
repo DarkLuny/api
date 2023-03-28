@@ -2,8 +2,7 @@
 
 This script automatically types a message in chat every time you kill someone. If it's a headshot, it says "one tap", otherwise it says "effortless"
 
-{% code-tabs %}
-{% code-tabs-item title="talk_shit.lua" %}
+
 ```lua
 local userid_to_entindex, get_local_player, is_enemy, console_cmd = client.userid_to_entindex, entity.get_local_player, entity.is_enemy, client.exec
 
@@ -22,7 +21,6 @@ local function on_player_death(e)
 end
 client.set_event_callback("player_death", on_player_death)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 Originally written by admin
