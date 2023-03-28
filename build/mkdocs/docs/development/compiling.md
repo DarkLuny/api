@@ -2,7 +2,7 @@
 
 **Compiling scripts can give a slight performance boost, although you should be fine without it.**
 
-{% hint style="success" 
+
 [**Download from MEGA**](https://mega.nz/#!JpFAhYjb!35AbAx8sGdmVAI3o-EVHtGA_-Y1WqReo7WWUWHOdYo4)
 
 
