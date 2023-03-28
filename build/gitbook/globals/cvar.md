@@ -106,8 +106,8 @@ cl_fullupdate:invoke_callback()
 local oldval = developer.get_int()
 developer:set_raw_int(bxor(oldval, 1))
 ```
-{% endcode-tabs-item %}
-{% code-tabs-item title="cvar-2.lua" %}
+
+
 ```lua
 local snd_setmixer = cvar.snd_setmixer
 
