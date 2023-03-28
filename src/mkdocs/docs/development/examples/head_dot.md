@@ -44,4 +44,4 @@ local function on_paint()
 end
 client.set_event_callback("paint", on_paint)
 ```
-{% -tabs %}
+
