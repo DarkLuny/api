@@ -6,8 +6,8 @@ This is a simple text watermark showing the ping, tickrate and windows time. Ing
 
 Modify the `flags`, `margin` and `padding` variables to change the appearance. Colors are hardcoded in the 2 drawing function calls, but can be easily modified too.
 
-{% code-tabs %}
-{% code-tabs-item title="watermark.lua" %}
+
+
 ```lua
 -- localize often used API variables to improve performance. It's usually fine to not do this, but lua then has to look them up as globals every time.
 local client_latency, client_screen_size, client_system_time, globals_tickinterval, math_floor, renderer_measure_text, renderer_rectangle, renderer_text, string_format = client.latency, client.screen_size, client.system_time, globals.tickinterval, math.floor, renderer.measure_text, renderer.rectangle, renderer.text, string.format
@@ -38,5 +38,5 @@ local function on_paint()
 end
 client.set_event_callback("paint", on_paint)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
+
