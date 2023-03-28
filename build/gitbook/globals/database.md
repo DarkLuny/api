@@ -30,8 +30,6 @@ Writes a value to the database. Avoid calling this often. For example, call read
 
 ### Examples:
 
-{% code-tabs %}
-{% code-tabs-item title="database-1.lua" %}
 ```lua
 local data = database.read("example-1") or {}
 data.load_count = (data.load_count or 0) + 1
@@ -49,5 +47,3 @@ client.set_event_callback("shutdown", function()
 	database.write("example-1", data)
 end)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
