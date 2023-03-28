@@ -38,7 +38,7 @@ end
 
 client.set_event_callback('run_command', run_command)
 ```
-{% endcode-tabs-item 
+
 
 
 Originally written by admin
