@@ -3,8 +3,8 @@
 This script is an example for "client.create_interface".
 With this function you can access classes or functions provided by the game itself.
 
-{% code-tabs %}
-{% code-tabs-item title="create_interface.lua" %}
+
+
 ```lua
 local ffi = require 'ffi'
 
@@ -38,7 +38,7 @@ end
 
 client.set_event_callback('run_command', run_command)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode-tabs-item 
+
 
 Originally written by admin
