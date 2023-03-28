@@ -22,7 +22,7 @@ local function on_player_death(e)
 end
 client.set_event_callback("player_death", on_player_death)
 ```
-{% endcode-tabs-item 
+
 
 
 Originally written by admin
